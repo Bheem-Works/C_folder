@@ -37,3 +37,5 @@ int main()
 
 // Note : In the Comparing we use the strcmp;
 // And strcmp return the 0 for true and the 1 for the false. Basically it returns the answer in the boolean.
+// It compares with pointer vs character. And it stores int he arrays;
+/// & user for the single character not for the multiple.

@@ -1,45 +1,44 @@
-
 #include <stdio.h>
 #include <string.h>
 
 int main()
 {
-    //  दाता लिने ।
-    char userInput[40];
+    // प्रयोगकर्ताबाट इनपुट लिने
+    char प्रयोगकर्ता_इनपुट[40];
 
-    // यादि  युजर ले y लेखो भने परोसेस आनुसार युजरले आनुमाति पाऊछ। n लेखो भने पाऊदैन।
-    printf("Do you want to enter the calc world : (y/n)\n: ");
+    // यदि प्रयोगकर्ताले y लेख्यो भने अनुमति पाउँछ, n लेख्यो भने पाउँदैन
+    printf("\n: ");
 
-    scanf("%s", userInput);
+    scanf("%s", प्रयोगकर्ता_इनपुट);
 
-    printf(" The user say's ['%s']\n", userInput);
+    printf("प्रयोगकर्ताले ['%s'] भन्नुभयो\n", प्रयोगकर्ता_इनपुट);
 
-    // कमपयेर गरछ युजर ले y लेखेको छ या छैन ?
+    // प्रयोगकर्ताले y लेखेको छ कि छैन भनेर तुलना गर्ने
 
-    // strcmp ले चाहि यदि true छ भने 0 दिनछ। नभै 1 दिनछ।
-    if (strcmp(userInput, "y") == 0)
+    // strcmp ले मिल्यो भने 0 फर्काउँछ, नमिल्यो भने 1
+    if (strcmp(प्रयोगकर्ता_इनपुट, "y") == 0)
     {
-        printf("okay you are entering the game");
+        printf("ठिक छ, तपाईं खेलमा प्रवेश गर्दै हुनुहुन्छ");
+        // यो block भित्र पसेपछि function चल्छ
     }
     else
     {
-        printf("Sorry you are not allowed");
+        printf("माफ गर्नुहोस्, तपाईंलाई अनुमति छैन");
     }
 
-    int a, b;
+    int क, ख, चिन्ह;
 
-    printf("Enter the a : ");
-    scanf("%d", &a);
-    printf("Enter the b : ");
-    scanf("%d", &b);
+    printf("क को मान हाल्नुहोस् : ");
+    scanf("%d", &क);
 
-    // printing the variable number;
-    printf("%d", a);
-    printf("%d", b);
+    printf("ख को मान हाल्नुहोस् : ");
+    scanf("%d", &ख);
+
+    printf("चिन्ह हाल्नुहोस् : जस्तै + - * / : ");
+
+    // इनपुट गरिएका संख्या देखाउने
+    printf("%d", क);
+    printf("%d", ख);
+
     return 0;
-};
-
-// Note : In the Comparing we use the strcmp;
-// And strcmp return the 0 for true and the 1 for the false. Basically it returns the answer in the boolean.
-// It compares with pointer vs character. And it stores int he arrays;
-/// & user for the single character not for the multiple.
+}

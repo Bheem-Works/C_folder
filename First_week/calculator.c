@@ -1,44 +1,70 @@
 #include <stdio.h>
 #include <string.h>
 
+void calculator();
+
 int main()
 {
-    // प्रयोगकर्ताबाट इनपुट लिने
-    char प्रयोगकर्ता_इनपुट[40];
+    char prayogkarta_input[40];
 
-    // यदि प्रयोगकर्ताले y लेख्यो भने अनुमति पाउँछ, n लेख्यो भने पाउँदैन
-    printf("\n: ");
-
-    scanf("%s", प्रयोगकर्ता_इनपुट);
-
-    printf("प्रयोगकर्ताले ['%s'] भन्नुभयो\n", प्रयोगकर्ता_इनपुट);
-
-    // प्रयोगकर्ताले y लेखेको छ कि छैन भनेर तुलना गर्ने
-
-    // strcmp ले मिल्यो भने 0 फर्काउँछ, नमिल्यो भने 1
-    if (strcmp(प्रयोगकर्ता_इनपुट, "y") == 0)
+    // While loop suru bhayo
+    while (1)
     {
-        printf("ठिक छ, तपाईं खेलमा प्रवेश गर्दै हुनुहुन्छ");
-        // यो block भित्र पसेपछि function चल्छ
+        printf("\n--- Calculator Menu ---\n");
+        printf("Calculator chalauna 'y' thichnus, banda garna 'n' thichnus,\n exit type garnush bahira janu ko lagi : ");
+        scanf("%s", prayogkarta_input);
+
+        if (strcmp(prayogkarta_input, "y") == 0)
+        {
+            calculator(); // Calculator function call huncha
+        }
+        else if (strcmp(prayogkarta_input, "n") == 0)
+        {
+            printf("Program banda hudai cha. Dhanyabaad!\n");
+            break; // Loop bata bahira nikalcha
+        }
+        else if (strcmp(prayogkarta_input, "exit") == 0)
+        {
+            printf("Thanks for using the calculator");
+            break;
+        }
+        else
+        {
+            printf("Galti input! Kripaya 'y' ki 'n' matra thichnus.\n");
+        }
     }
-    else
-    {
-        printf("माफ गर्नुहोस्, तपाईंलाई अनुमति छैन");
-    }
-
-    int क, ख, चिन्ह;
-
-    printf("क को मान हाल्नुहोस् : ");
-    scanf("%d", &क);
-
-    printf("ख को मान हाल्नुहोस् : ");
-    scanf("%d", &ख);
-
-    printf("चिन्ह हाल्नुहोस् : जस्तै + - * / : ");
-
-    // इनपुट गरिएका संख्या देखाउने
-    printf("%d", क);
-    printf("%d", ख);
 
     return 0;
+}
+
+void calculator()
+{
+    int ka, kha;
+    char chinah[3];
+
+    printf("\n--- Naya Calculation ---\n");
+    printf("'a' ma value rakhnush : ");
+    scanf("%d", &ka);
+
+    printf("'b' ko value rakhnush : ");
+    scanf("%d", &kha);
+
+    printf("Chinah (+, -, *, /): ");
+    scanf("%s", chinah);
+
+    if (strcmp(chinah, "+") == 0)
+        printf("Result: %d\n", ka + kha);
+    else if (strcmp(chinah, "-") == 0)
+        printf("Result: %d\n", ka - kha);
+    else if (strcmp(chinah, "*") == 0)
+        printf("Result: %d\n", ka * kha);
+    else if (strcmp(chinah, "/") == 0)
+    {
+        if (kha != 0)
+            printf("Result: %d\n", ka / kha);
+        else
+            printf("Error: 0 le divide garna mildaina!\n");
+    }
+    else
+        printf("Galti chinah!\n");
 }

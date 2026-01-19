@@ -3,24 +3,23 @@
 int main()
 {
 
-    int number = 40, guessNumber;
-
+    int computer_number = 40, user_number;
     while (1)
     {
-        printf("Enter the number : \n");
-        scanf("%d", &guessNumber);
-
-        if (number > guessNumber)
+        printf("Enter the number between 0 to 50 :");
+        scanf("%d", &user_number);
+        printf("\n");
+        if (computer_number > user_number)
         {
-            printf("Your number is greater then guessNumber");
+            printf("computer number is greater then: %d\n\n", user_number);
         }
-        else if (number < guessNumber)
+        else if (computer_number < user_number)
         {
-            printf("Your number is less then the guessNumber");
+            printf("computer_number is less then: %d\n\n", user_number);
         }
         else
         {
-            printf("Your number is matched with the guessed number");
+            printf("'Mached'! Computer number is %d and user_number%d\n\n", computer_number, user_number);
             break;
         }
         /* code */

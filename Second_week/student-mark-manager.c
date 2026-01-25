@@ -130,8 +130,8 @@ int main()
 				strcpy(status, "Fail");
 			}
 
-			printf("Grade	%s:\n", grade);
-			printf("Status	%s\n:", status);
+			printf("Grade%s:\n", grade);
+			printf("Status%s:\n:", status);
 			printf("\n\n");
 		}
 		else if (choice == 4)

@@ -4,11 +4,15 @@
 struct contactBook
 {
     char name[50];
-    int
+    int phoneNumber[40];
+    char email[50];
 };
 
 int main()
+
 {
+
+    struct contactBook cb;
 
     while (1)
     {
@@ -23,7 +27,16 @@ int main()
         printf("4.Delete contact\n");
         printf("5.Exit\n\n");
 
+        int choice;
         printf("Enter your choice_:");
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+        }
+        else if ()
+        {
+        };
     }
 
     return 0;

@@ -58,6 +58,31 @@ int main()
                 printf("number:%d \n Name:%s \nPhoneNumber: %s\n Email: %s\n", i + 1, cb[i].name, cb[i].phoneNumber, cb[i].email);
             }
         }
+        else if (choice == 3)
+        {
+            char searchName[50];
+            int found = 0;
+            printf("\n==== Search Contact ====\n");
+            printf("Enter the Name to search: ");
+            scanf("%s", searchName);
+
+            for (int i = 0; i < count; i++)
+            {
+                if (strcmp(cb[i].name, searchName) == 0)
+                {
+                    printf("\nContact Found!\n");
+                    printf("Name: %s\nPhone: %s\nEmail: %s\n", cb[i].name, cb[i].phoneNumber, cb[i].email);
+                    found = 1;
+                    break; // Vetepachi loop banda gardine
+                }
+            }
+
+            if (!found)
+            {
+                printf("Contact not found!\n");
+            }
+        }
+
         else if (choice == 5)
         {
             printf("Thanks for using the contact book");
@@ -67,3 +92,28 @@ int main()
 
     return 0;
 };
+
+/*
+    How to delete the positions from the array
+{
+    int arr[] = {10,20,30,40,50};
+
+    int n = 5;
+    int pos = 3;
+
+    if(pos < 1 || pos > n){
+        printf("Invalid positions");
+    }
+    else
+    {
+        for(int i = pos - 1; i < n-1; i++){
+            arr[i] = arr[i+1];
+            }
+            n--;
+
+            printf("Array declaration");
+        for(int = 0; i < n; i++){
+            printf("%d",arr[i]);
+                }
+    }
+*/

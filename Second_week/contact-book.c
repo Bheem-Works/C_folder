@@ -82,7 +82,35 @@ int main()
                 printf("Contact not found!\n");
             }
         }
+        else if (choice == 4)
+        {
+            char deleteName[50];
+            int found = 0;
 
+            printf("\n==== Delete Contact ====\n");
+            printf("Enter the Name to delete: ");
+            scanf("%s", deleteName);
+
+            for (int i = 0; i < count; i++)
+            {
+
+                if (strcmp(cb[i].name, deleteName) == 0)
+                {
+                    for (int j = 0; j < count - 1; j++)
+                    {
+                        cb[j] = cb[j + 1];
+                    }
+                    count--;
+                    found = 1;
+                    printf("Contact delete successfully!");
+                    break;
+                }
+            }
+            if (!found)
+            {
+                printf("Contact can not be foun with that name! \n");
+            }
+        }
         else if (choice == 5)
         {
             printf("Thanks for using the contact book");

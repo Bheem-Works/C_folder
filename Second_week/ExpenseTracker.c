@@ -100,4 +100,6 @@ In the code , I used: printf("%-12s | %-15s | %-10.2f", ...)
 %-15s: The Category gets 15 spaces.
 
 %-10.2f: The Amount gets 10 spaces, and the .2 ensures it only shows 2 decimal places (like 10.50 instead of 10.500000).
+
+
 */

@@ -54,7 +54,6 @@ int main()
         }
         else if (choice == 2)
         {
-
             printf("\n%-12s | %-15s | %-10s | %-15s\n", "Date", "Category", "Amount", "Note");
             printf("------------------------------------------------------------\n");
             for (int i = 0; i < count; i++)
@@ -83,23 +82,4 @@ int main()
         }
     }
     return 0;
-};
-
-/*
-    Note :
-    That's a great question! Those are called Format Specifiers with Width Modifiers.
-    In C, when you use a standard %s, the computer just prints the text and stops.
-    If one category is "Food" (4 letters) and the next is "Transportation" (14 letters), your columns will be messy and zigzagged.
-    The -12s is the "secret sauce" for making your data look like a neat table.Breaking Down %-12sPartMeaning%Start of the format specifier.-Left-justify the text (aligns it to the left). Without this, it aligns to the right. 12The Minimum Width.
-    It tells C: "Reserve exactly 12 spaces for this string."sTells C the data is a String.
-
-In the code , I used: printf("%-12s | %-15s | %-10.2f", ...)
-
-%-12s: The Date gets 12 spaces.
-
-%-15s: The Category gets 15 spaces.
-
-%-10.2f: The Amount gets 10 spaces, and the .2 ensures it only shows 2 decimal places (like 10.50 instead of 10.500000).
-
-
-*/
+}

@@ -2,24 +2,26 @@
 
 #include <stdio.h>
 
-int factNum(int num)
+int factorialNum(int n)
 {
+
     int fact = 1;
-    for (int i = 1; i <= num; i++)
+    for (int i = 1; i <= n; i++)
     {
         fact = fact * i;
     }
+
     return fact;
 };
 
 int main()
 {
-    int inputNum, result;
 
-    printf("Enter the number");
-    scanf("%d", &inputNum);
+    int inputNumber;
+    printf("Enter the input number : ");
+    scanf("%d", &inputNumber);
 
-    printf("Factorial of %d is: %lld\n", inputNum, factNum(inputNum));
+    printf(" number of %d factorial is %lld:,factorialNum(inputNumber)");
 
     return 0;
 };

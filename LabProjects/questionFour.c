@@ -32,4 +32,4 @@ int main()
     printf("Joined string: %s\n", str1);
 
     return 0;
-}
+};

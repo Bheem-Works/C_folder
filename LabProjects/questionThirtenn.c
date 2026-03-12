@@ -3,12 +3,13 @@
 
 #include <stdio.h>
 
-int main(){
-	int a = 3; 
-	int b = 4; 
+int main()
+{
+	int a = 3;
+	int b = 4;
 	int *first = &a;
 	int *second = &b;
 	int sum = *first + *second;
-	printf("The sum %d",sum);
+	printf("The sum %d", sum);
 	return 0;
 };

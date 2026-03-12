@@ -1,6 +1,7 @@
 // write a program that take the roll_no,fname,lname of 5 students and print the records on screen using structure.
 
 #include <stdio.h>
+
 struct student
 {
 	int roll_no;

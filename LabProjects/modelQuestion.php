@@ -16,6 +16,17 @@ if(mysqli_query($con,$sql)){
 };
 mysql_close($con);
 
+<script>
+// The javascript program to find the largest among the three numbers; 
+let a = 50,b=30,c=20;
+if(a>b && b > c) {
+    console.log("A is bigger then the b and the c");
+} else if(b > a && b > c) {
+    console.log("B is bigger then the a and the c");
+} else {
+    console.log("C is bigger than all of them ")
+}
+</script>
 // create table vim (
 // reg_no int,
 // name varchar(25),
